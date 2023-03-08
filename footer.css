@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+#footer_container {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 10vh;
+    font-size: 16px;
+}
+#f_pbox2 {
+    padding: 5vh 0;
+}
+#f_pbox1, #f_pbox3 {
+    text-align: center;
+    background-color: #1b3677;
+    /* background-color: #4a65a7; */
+    /* color: white; */
+}
+#icon1 {
+    margin-top: 1vh;
+    text-decoration: none;
+    color: white;
+}
+h4{
+    margin-bottom: 1vh;
+}
+#f_tel, #f_email {
+    margin-bottom: 1.5vh;
+}
+#f_pbox2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: navy;
+    /* background-color: #1b3677; */
+    /* color: white; */
+}
+#f_pbox2 > div {
+    margin: 1vh 2vh 2vh;
+}
+#f_pbox2_cbox1 > address{
+    display: grid;
+    grid-row-gap: 2vh;
+    font-size: small;
+}
+address{
+    font-style: normal;
+}
+.f_box1  {
+    margin-top: -1.5vh;
+}
+#f_pbox2_cbox2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+#f_gcbox1, #f_gcbox2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#f_gcbox1 > div > img {
+    width: 75px;
+}
+.f_box2,
+.f_box3 {
+    margin-top: 1.5vh;
+}
+.f_list {
+    font-size: small;
+    line-height: 32px;
+}
+.f_box2A {
+    line-height: 32px;
+}
+#f_pbox3_cbox1 {
+    margin-top: -1vh;
+}
+#f_pbox3_cbox2 {
+    display: flex;
+    justify-content: center;
+}
+#f_pbox3_cbox2 > div {
+    margin: -1vh 0.5vw 2vh;
+}
+#f_pbox3_cbox2 > div > a > img {
+    width: 25px;
+    background-color: white;
+}
+.f_link {
+    text-decoration: none;
+    color: white;
+}
+.footer-logo {
+    padding: 5px;
+    border-radius: 50%;
+}
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+    #f_pbox2 {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    #f_pbox2 {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    #f_gcbox1, #f_gcbox2 {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+    }
+    .f_box2 {
+        margin-top: 0vh;
+    }
+    .f_box2B {
+        line-height: 32px;
+    }
+}

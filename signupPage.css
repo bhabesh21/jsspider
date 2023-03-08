@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* container  */
+#s-container {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+/* #s-container > div {
+    border: 1px solid blueviolet;
+} */
+
+/* contact-box */
+#s-contact-box {
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+}
+#s-contact-box > span {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* menubar-box */
+#s-menubar-box {
+    background-color: navy;
+    padding: 15px 50px;
+    display: flex;
+    align-items: flex-end;
+}
+#s-menubar-box > img:nth-child(1) {
+    height: 25px;
+}
+#s-menubar-box > img:nth-child(2) {
+    height: 40px;
+    margin: auto;
+}
+
+/* main-box */
+#s-main-box {
+    height: 100vh;
+    background-image: url("images/home_desktop_login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+#s-form-box {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    /* width: calc(100vw - 75vw); */
+    width: 300px;
+    background-color: whitesmoke;
+    padding: 20px 40px 10px 40px;
+    margin:  30px 100px;
+    border-radius: 50px;
+}
+#s-dp {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.fa-user {
+    background-color: navy;
+    color: white;
+    padding: 25px;
+    border-radius: 50%;
+}
+.form-item {
+    margin: 10px 0;
+    position: relative;
+}
+.form-item > label {
+    font-weight: bold;
+}
+.form-item > input {
+    width: 98%;
+    margin: 5px 0;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border-style: solid;
+}
+.form-item > input:focus {
+    outline: 0;
+    border-width: 3px;
+    border-color: navy;
+}
+.form-item > .fa-circle-check,
+.form-item > .fa-circle-exclamation {
+    position: absolute;
+    right: 5px;
+    top: 37px;
+    visibility: hidden;
+}
+.form-item > small {
+    visibility: hidden;
+}
+.form-item.success > input {
+    border-color: green;
+}
+.form-item.error > input {
+    border-color: red;
+}
+.form-item.success > .fa-circle-check {
+    color: green;
+    visibility: visible;
+}
+.form-item.error > .fa-circle-exclamation {
+    color: red;
+    visibility: visible;
+}
+.form-item.error > small {
+    color: red;
+    visibility: visible;
+}
+.password-eye {
+    position: absolute;
+    right: 25px;
+    top: 37px;
+}
+.password-eye.open-eye {
+    visibility: hidden;
+}
+#s-submit-btn {
+    width: 100%;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: large;
+    background-color: navy;
+    color: white;
+    border-radius: 25px;
+    border: none;
+}
+#s-submit-btn:active {
+    background-color: green;
+}
+#move_to_login {
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+#s-image-box {
+    /* overflow: hidden;
+    visibility: hidden; */
+    display: none;
+}
+#s-image-box > img {
+    width: 100vw;
+}
+
+/* security-box */
+#s-security-box {
+    background-color: navy;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+#s-security-box > img {
+    height: 50px;
+}
+
+/* medium screen */
+@media only screen and (max-width: 1400px) {
+    #s-form-box {
+        margin: 95px 25px;
+    }
+}
+
+
+/* small screen  */
+@media only screen and (max-width: 1200px) {
+    #s-main-box {
+        background-image: none;
+        height: auto;
+    }
+    #s-form-box {
+        margin: 50px auto;
+    }
+    #s-image-box {
+        /* visibility: visible; */
+        display: block;
+        margin-bottom: -0.6vh;
+    }
+}

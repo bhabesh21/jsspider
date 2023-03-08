@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- header css -->
+    <link rel="stylesheet" href="navbar1.css">
+    
+    <!-- main css -->
+    <link rel="stylesheet" href="cadbury.css">
+
+    <!-- footer css -->
+    <link rel="stylesheet" href="footer.css">
+    
+    <!-- header javascript -->
+    <script src="https://kit.fontawesome.com/fb50b4aefb.js" crossorigin="anonymous"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+        }
+    </style>
+    
+    <title>cadbury</title>
+</head>
+<body>
+    <header id="header_section">
+        <div id="navbar_container">
+            <img src="images/dhanilogo_white.svg" alt="" id="navbar_dhani_logo">
+            
+            <div id="navbar_search_container">
+                <input type="text" id="navbar_search_box" placeholder="Search Product">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+    
+            
+            
+            <ul id="navbar_list">
+                <li>
+                    <a class="nav_items" href="home.html">
+                        <i class="fa-solid fa-house"></i>
+                        HOME
+                    </a>
+                </li>
+                <li>
+                    <a class="nav_items" href="men.html">
+                        <i class="fa-solid fa-person"></i>
+                        MEN
+                    </a>
+                </li>
+                <li>
+                    <a class="nav_items" href="saree.html">
+                        <i class="fa-solid fa-person-dress"></i>
+                        WOMEN
+                    </a>
+                </li>
+                <li>
+                    <a class="nav_items" href="profile.html">
+                        <i class="fa-solid fa-address-card"></i>
+                        PROFILE
+                    </a>
+                </li>
+                <li>
+                    <a class="nav_items" href="addToCart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        ADD TO CART
+                    </a>
+                </li>
+                <li>
+                    <a class="nav_items" href="#">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                        HELP
+                    </a>
+                </li>
+                <li>
+                    <a class="nav_items" href="loginPage.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        LOGOUT
+                    </a>
+                </li>
+            </ul>
+            
+            <div id="navbar_menu_logo">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            
+        </div>
+    
+        <script src="navbar1.js"></script>
+    </header>
+
+     <!-- filter start -->
+     <div id="filter">
+        <select id="sort" onchange="sortFun()">
+            <option>Sort</option>
+            <option>Low To High</option>
+            <option>High To Low</option>
+        </select>
+    </div>
+<!-- filter end -->
+
+
+    <main id="main_section">
+        <div id="cadbury_container"></div>
+    </main>
+    
+
+    <footer id="footer_section">
+        <div id="footer_container">
+
+            <div id="f_pbox1">
+                <a href="#"><ion-icon id="icon1" name="triangle-sharp"></ion-icon></a>
+                <h4>Top of Page</h4>
+            </div>
+            
+            <div id="f_pbox2">
+                <div id="f_pbox2_cbox1">
+                    <address>
+                        <div>
+                            <p  id="f_tel">Call us</p>
+                            <h4 class="f_box1"><a class="f_link" href="tel: +9101246555555">0124-6555-555</a></h4>
+                        </div>
+                        <div>
+                            <p>
+                                Dhani Services Limited<br>
+                                Registered Office: 1/1 E, First Floor, East Patel Nagar,<br>
+                                New Delhi-110 008<br>
+                                CIN: U74899DL1994PLC062407<br>
+                            </p>
+                        </div>
+                        <div>
+                            <p id="f_email">Email us at</p>
+                            <p class="f_box1"><a class="f_link" href="mailto: support@dhani.com">support@dhani.com</a></p>
+                        </div>
+                    </address>
+                </div>
+                <div id="f_pbox2_cbox2">
+                    <div id="f_gcbox1">
+                        <div class="f_box2B">
+                            <img class="f_box2" src="images/dhanilogo_white.svg" alt="">
+                            <details  class="f_box2">
+                                <summary>Investores</summary>
+                                <p class="f_list">Annual Reports</p>
+                                <p class="f_list">Advertisements</p>
+                                <p class="f_list">Financial Reports</p>
+                                <p class="f_list">Corporate Announcements</p>
+                                <p class="f_list">Notices</p>
+                            </details>
+                            <details  class="f_box2">
+                                <summary>Legal Policies</summary>
+                                <p class="f_list">Fair Practices Codes</p>
+                                <p class="f_list">Grievance Redressal Policy</p>
+                                <p class="f_list">Interest Rate Policy</p>
+                                <p class="f_list">Ombudsman Scheme</p>
+                                <p class="f_list">CSR Policy</p>
+                            </details>
+                        </div>
+                        <div class="f_box2 f_box2A">
+                            <p><a class="f_link" href="#">FAQ's</a></p>
+                            <p><a class="f_link" href="#">Need help?</a></p>
+                            <p><a class="f_link" href="#">About us</a></p>
+                        </div>
+                    </div>
+                    <div id="f_gcbox2" class="f_box2 f_box2A">
+                        <div>
+                            <p><a class="f_link" href="#">Shipping Policy</a></p>
+                            <p><a class="f_link" href="#">Privacy Policy</a></p>
+                            <p><a class="f_link" href="#">Become a Seller</a></p>
+                        </div>
+                        <div>
+                            <p><a class="f_link" href="#">Terms and Conditions</a></p>
+                            <p><a class="f_link" href="#">Return Policy</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="f_pbox3">
+                <div id="f_pbox3_cbox1">
+                    <p class="f_box3" ><a class="f_link" href="#">Reach out to us</a></p>
+                </div>
+                <div id="f_pbox3_cbox2" class="f_box3" >
+                        <div>
+                            <a class="f_link" href="#"><img class="footer-logo" src="images/logo-facebook.svg" alt=""></a>
+                        </div>
+                        
+                            <a class="f_link" href="#"><div><img class="footer-logo" src="images/logo-linkedin.svg" alt=""></a>
+                        </div>
+                        <div>
+                            <a class="f_link" href="#"><img class="footer-logo" src="images/logo-twitter.svg" alt=""></a>
+                        </div>
+                        <div>
+                            <a class="f_link" href="#"><img class="footer-logo" src="images/logo-instagram.svg" alt=""></a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>
+
+<script src="cadbury.js"></script>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/fb50b4aefb.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="signupPage.css">
+
+    <title>Signup Page</title>
+</head>
+<body>
+    <div id="s-container">
+        <div id="s-contact-box">
+            <i class="fa-solid fa-phone"></i>
+            <span>0124-6555555</span>
+        </div>
+        <div id="s-menubar-box">
+            <img src="images/home.svg" alt="">
+            <img src="images/dhanilogo_white.svg" alt="">
+        </div>
+        <div id="s-main-box">
+            <div id="s-form-box">
+                <div id="s-dp">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <form id="s-form" autocomplete="off">
+                    <div class="form-item">
+                        <label for="s-pnumber">Phone Number</label>
+                        <input type="tel" id="s-pnumber" placeholder="Enter your phone number" autofocus>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-item">
+                        <label for="s-password">Password</label>
+                        <input type="password" id="s-password" placeholder="Enter the password">
+                        <i class="fa-solid fa-eye password-eye password-eye1 open-eye"></i>
+                        <i class="fa-solid fa-eye-slash password-eye password-eye1 close-eye"></i>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-item">
+                        <label for="s-cpassword">Conformation Password</label>
+                        <input type="password" id="s-cpassword" placeholder="Enter the conformation password">
+                        <i class="fa-solid fa-eye password-eye cpassword-eye1 open-eye"></i>
+                        <i class="fa-solid fa-eye-slash password-eye cpassword-eye1 close-eye"></i>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small>Error message</small>
+                    </div>
+                    <input type="submit" value="SIGNUP" id="s-submit-btn">
+                </form>
+                <p id="move_to_login"><a href="loginPage.html">LOGIN</a></p>
+            </div>
+            <div id="s-image-box">
+                <img src="images/loginPage.png" alt="">
+            </div>
+        </div>
+        <div id="s-security-box">
+            <img src="images/security_icon.svg" alt="">
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="signupPage.js"></script>
+</body>
+</html>

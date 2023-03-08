@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* background-color: rgb(243, 240, 235); */
+    /* background-image: linear-gradient(blue, green); */
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+}
+#addToCart_main_container {
+    /* border: 1px solid green; */
+    display: flex;
+    font-size: 16px;
+    min-height: 75vh;
+}
+#addToCart_container {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 400px;
+    row-gap: 2px;
+    font-size: small;
+}
+#addToCart_container > div {
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+#addToCart_container > div:hover {
+    background-image: linear-gradient(red, blueviolet);
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+/* image  */
+#addToCart_container > div > div:nth-child(1) {
+    width: 100px;
+}
+#addToCart_container > div > div:nth-child(1) > img {
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+/* description */
+#addToCart_container > div > div:nth-child(2) {
+    width: 30%;
+    text-align: justify;
+    margin-top: 10px;
+    padding: 0 5px;
+}
+
+/* price & strickprice */
+#addToCart_container > div > div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 5px;
+}
+.addToCart_item_strickPrice {
+    text-decoration: line-through;
+    color: gray;
+    margin-top: 5px;
+}
+
+/* add to cart */
+#addToCart_container > div > div:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#addToCart_container > div > div:nth-child(4) > button {
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    font-weight: bold;
+    padding: 5px;
+    margin-right: 15px;
+}
+#addToCart_container > div > div:nth-child(4) > button:hover {
+    background-color: navy;
+    color: white;
+}
+#addToCart_container > div > div:nth-child(4) > button:active {
+    background-color: green;
+}
+
+#addToCart_container2 {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+#price_box {
+    /* border: 1px solid blue; */
+    background-color: white;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    width: calc(100vw - 60vw);
+    max-height: 400px;
+    padding: 2vw;
+    /* position: fixed; */
+    line-height: 48px;
+}
+#price_details_box1 {
+    border-bottom: 1px dotted black;
+}
+#price_details_box2,
+#price_details_box3,
+#price_details_box4,
+#price_details_box5 {
+    display: flex;
+    justify-content: space-between;
+}
+#discount_price {
+    color: green;
+}
+#delivery_charges {
+    color: green;
+}
+#price_details_box5 {
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+    font-weight: bold;
+}
+#price_details_box6 {
+    color: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+#buy_now {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: large;
+    font-weight: bold;
+    background-color: navy;
+    color: white;
+}
+#buy_now:active {
+    background-color: green;
+    color: white;
+}
+#addToCart_main_container.present {
+    background-image: url("images/empty_cart.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.present #addToCart_container2 {
+    display: none;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1170px) {
+    #buy_now {
+        flex-grow: 1;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #addToCart_main_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #addToCart_container {
+        grid-template-columns: 80vw;
+    }
+    #addToCart_container2 {
+        margin-top: 20px;
+    }
+    #price_box {
+        width: 80vw;
+        /* position: relative; */
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #addToCart_main_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #addToCart_container {
+        grid-template-columns: 90vw;
+    }
+    #addToCart_container > div > div:nth-child(2),
+    #addToCart_container > div > div:nth-child(4) > button,
+    .addToCart_item_strickPrice  {
+        font-size: x-small;
+    }
+    #addToCart_price {
+        font-size: small;
+    }
+    #addToCart_container2 {
+        margin-top: 20px;
+    }
+    #price_box {
+        width: 90vw;
+        /* position: relative; */
+    }
+    #buy_now {
+        flex-grow: 1;
+    }
+}

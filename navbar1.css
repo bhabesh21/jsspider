@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+#navbar_container {
+    background-color: navy;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+#navbar_dhani_logo {
+    height: 4rem;
+    min-height: 3rem;
+    max-height: 4rem;
+    margin-left: 2rem;
+}
+#navbar_search_container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#navbar_search_container > input {
+    width: 25vw;
+    min-width: 20rem;
+    padding: 0.7rem 1rem;
+}
+#navbar_search_container > input:focus {
+    outline: none;
+    border: 0.2rem solid red;
+}
+#navbar_search_container > i {
+    border-left: 0.3rem solid black;
+    font-size: 2rem;
+    position: absolute;
+    right: 0.5rem;
+    padding-left: 0.5rem;
+}
+#navbar_search_container > i:hover {
+    color: red;
+    border-color: red;
+}
+#navbar_search_container > i:active {
+    color: green;
+    border-color: green;
+}
+#navbar_list {
+    display: flex;
+    gap: 4vw;
+    font-size: 1.2rem;
+}
+#navbar_list > li {
+    list-style: none;
+}
+#navbar_list > li > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#navbar_list > li > a:hover {
+    color: tomato;
+}
+#navbar_list > li > a:active {
+    color: green;
+}
+#navbar_menu_logo {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+#navbar_menu_logo > i {
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    display: none;
+}
+
+
+@media only screen and (max-width: 1050px) {
+    html {
+        font-size: 50%;
+    }
+    #navbar_search_container > i {
+        font-size: 1.5rem;
+    }
+    #navbar_list {
+        gap: 4vw;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #navbar_search_container  {
+        margin-left: -5rem;
+    }
+    #navbar_search_container > input {
+            width: 30vw;
+    }
+    #navbar_list {
+        width: 50vw;
+        height: 100vh;
+        background-color: navy;
+        position: absolute;
+        top: 5.8rem;
+        left: 50vw;
+        font-size: 1.5rem;
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    #navbar_container.active {
+        overflow: visible;
+    }
+    .active #navbar_list {
+        transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    #navbar_list > li {
+        margin-top: 3rem;
+    }
+    #navbar_list > li > a {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+    #navbar_menu_logo > .fa-bars {
+        display: block;
+        padding: 0.5rem;
+        border: 3px solid white;
+    }
+    .active #navbar_menu_logo > .fa-xmark {
+        display: block;
+        padding: 0.5rem;
+        border: 3px solid white;
+    }
+    .active #navbar_menu_logo > .fa-bars {
+        display: none;
+    }
+}
